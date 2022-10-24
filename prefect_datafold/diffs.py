@@ -28,7 +28,7 @@ def create_diff(datafold_creds: DatafoldCredentials, payload: dict):
         ```
     """
     headers = {
-        "Authorization": f"Bearer {datafold_creds.api_key}",
+        "Authorization": f"Bearer {datafold_creds.api_key.get_secret_value()}",
         "Content-Type": "application/json"
     }
     
